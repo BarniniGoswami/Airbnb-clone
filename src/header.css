@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* we want the header to not scroll up when the page is scrolled */
+  position: sticky;
+  top: 0;
+
+  /* we always want the header to be on top of every element thus the highest z-index */
+  z-index: 100;
+
+  /* border: 1px solid black; */
+  width: 100%;
+  background-color: white;
+  /* border: 1px solid black; */
+}
+
+.header__icon {
+  height: 100px;
+  object-fit: contain;
+  margin-left: 20px;
+}
+
+.header__center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: fit-content;
+  padding: 10px;
+  height: 30px;
+  border: 1px lightgray solid;
+  border-radius: 999px;
+}
+.header__center > input {
+  border: none;
+  /* width: 250px; */
+
+  /* make sure that when we click inside the input to put a value then thata black border must not come */
+  outline-width: 0;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+  justify-content: space-between;
+  width: 15vw;
+  margin-right: 80px;
+}
