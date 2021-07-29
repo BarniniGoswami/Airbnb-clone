@@ -2,12 +2,15 @@ import React,{useState} from 'react';
 import './Banner.css';
 import {Button} from '@material-ui/core';
 import Search from './Search';
+import {useHistory} from 'react-router-dom';
 
 function Banner()
 {
     // to track if the searchButton has been clicked
     // then we will have to display 'Hide' on the button
     const[showSearch,setShowSearch]= useState(false);
+    // react hook
+    const history=useHistory();
     return(
         <div className='banner'>
            <div className="banner__search">
@@ -28,7 +31,8 @@ function Banner()
               </h5>
               {/* material UI allows u to pass properties
               to the components */}
-              <Button variant='outlined'>
+              <Button variant='outlined'
+              onClick={()=>history.push('/search')}>
                   Explore nearby
               </Button>
            </div>
